@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Will you go on a date with me?</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="hearts">
+      <span class="heart">❤︎</span>
+      <span class="heart">❤︎</span>
+      <span class="heart">❤︎</span>
+      <span class="heart">❤︎</span>
+      <span class="heart">❤︎</span>
+      <span class="heart">❤︎</span>
+      <span class="heart">❤︎</span>
+      <span class="heart">❤︎</span>
+      <span class="heart">❤︎</span>
+      <span class="heart">❤︎</span>
+      <span class="heart">❤︎</span>
+      <span class="heart">❤︎</span>
+      <span class="heart">❤︎</span>
+      <span class="heart">❤︎</span>
+    </div>
+
+    <main class="card" role="main">
+      <!-- Screen 1: Invitation -->
+      <section class="screen active" data-step="1" id="screen-1">
+        <img src="assets/gifs/shy-bashful.webp" alt="Cute intro GIF" class="gif-placeholder"/>
+        <h1 class="title">Will you go on a date with me?</h1>
+        <div class="actions">
+          <button id="yesBtn" class="btn btn-primary">Yes</button>
+          <button id="noBtn" class="btn btn-ghost">No</button>
+        </div>
+      </section>
+
+      <!-- Screen 2: Funny Reaction -->
+      <section class="screen" data-step="2" id="screen-2">
+        <img src="assets/gifs/happy-dancing.gif" alt="Surprised reaction GIF" class="gif-placeholder"/>
+        <h2 class="title">WAIT... YOU ACTUALLY SAID YES??</h2>
+        <p class="sub">Okay, okay. Let’s plan this properly.</p>
+        <div class="actions">
+          <button id="continueBtn" class="btn btn-primary">Continue</button>
+        </div>
+      </section>
+
+      <!-- Screen 3: Date & Time -->
+      <section class="screen" data-step="3" id="screen-3">
+        <img src="assets/gifs/snoopy-dance.gif" alt="Calendar GIF" class="gif-placeholder"/>
+        <h2 class="title">So... when are you free?</h2>
+        <div class="form-row">
+          <input type="date" id="dateInput" class="input-date" />
+          <select id="timeSelect" class="input-select">
+            <option value="">Select a time</option>
+            <option value="5:00 PM">5:00 PM — early but cute</option>
+            <option value="6:00 PM">6:00 PM — perfect timing</option>
+            <option value="7:00 PM">7:00 PM — dinner date vibes</option>
+            <option value="8:00 PM">8:00 PM — late but romantic</option>
+          </select>
+        </div>
+        <p id="dateWarning" class="warning" aria-live="polite"></p>
+        <div class="actions">
+          <button id="nextToFoodBtn" class="btn btn-primary">Next</button>
+        </div>
+      </section>
+
+      <!-- Screen 4: Food Selection -->
+      <section class="screen" data-step="4" id="screen-4">
+        <img src="assets/gifs/dudu-bubu-having-dinner-dudu-food.webp" alt="Food GIF" class="gif-placeholder"/>
+        <h2 class="title">What are we eating?</h2>
+        <div id="foodGrid" class="grid">
+          <button class="food-card" data-food="Pizza">
+            <img src="assets/icons/pizza.png" alt="Pizza icon" class="food-icon"/>
+            <span class="food-label">Pizza</span>
+          </button>
+          <button class="food-card" data-food="Sushi">
+            <img src="assets/icons/sushi.png" alt="Sushi icon" class="food-icon"/>
+            <span class="food-label">Sushi</span>
+          </button>
+          <button class="food-card" data-food="Burgers">
+            <img src="assets/icons/burger.png" alt="Burger icon" class="food-icon"/>
+            <span class="food-label">Burgers</span>
+          </button>
+          <button class="food-card" data-food="Pasta">
+            <img src="assets/icons/spaguetti.png" alt="Pasta icon" class="food-icon"/>
+            <span class="food-label">Pasta</span>
+          </button>
+          <button class="food-card" data-food="Tacos">
+            <img src="assets/icons/taco.png" alt="Tacos icon" class="food-icon"/>
+            <span class="food-label">Tacos</span>
+          </button>
+          <button class="food-card" data-food="Ramen">
+            <img src="assets/icons/ramen.png" alt="Ramen icon" class="food-icon"/>
+            <span class="food-label">Ramen</span>
+          </button>
+        </div>
+        <p id="foodWarning" class="warning" aria-live="polite"></p>
+        <div class="actions">
+          <button id="confirmFoodBtn" class="btn btn-primary">Confirm</button>
+        </div>
+      </section>
+
+      <!-- Screen 5: Final Confirmation -->
+      <section class="screen" data-step="5" id="screen-5">
+        <img src="assets/gifs/hug.webp" alt="Happy final GIF" class="gif-placeholder"/>
+        <h2 class="title">It’s a date.</h2>
+        <p class="final-msg" id="finalMsg"></p>
+        <p class="note">I’ll handle the rest.</p>
+        <div class="actions">
+          <button id="startOverBtn" class="btn btn-ghost">Start Over</button>
+        </div>
+      </section>
+
+    </main>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
